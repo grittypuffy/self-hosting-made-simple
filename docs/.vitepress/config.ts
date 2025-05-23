@@ -22,6 +22,13 @@ export default defineConfig({
           { text: 'Piped', link: '/piped' },
           { text: 'Ente', link: '/ente' }
         ]
+      },
+      {
+        text: 'Extras',
+        items: [
+          { text: 'Self-hosting website', link: '/self-hosting-website' },
+          { text: 'Considerations', link: '/considerations' }
+        ]
       }
     ],
 

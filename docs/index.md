@@ -22,4 +22,3 @@ features:
   - title: How?
     details: Delve deep into nuances of self-hosting with examples
 ---
-
