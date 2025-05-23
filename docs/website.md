@@ -52,42 +52,36 @@ Try loading https://localhost on your system and you should be able to see it li
 
   ``` sh
   npx create-next-app # Should ask for project name, use defaults when unsure, will install dependencies  
-  cd <your-project-name>
+  cd your-project-name
   ```
 
 2. Dockerize your application using a simple Dockerfile
-  ``` dockerfile
+  ```
   # Base image
   FROM node:18-alpine
-
   # Set working directory
   WORKDIR /app
-
   # Copy package files and install dependencies
   COPY package*.json ./
   RUN npm install
-
   # Copy the rest of the application
   COPY . .
-
   # Build the Next.js app
   RUN npm run build
-
   # Expose the port the app runs on
   EXPOSE 3000
-
   # Start the Next.js app
   CMD ["npm", "start"]
   ```
 
-3. Build a Docker image for usage in containers. Substitute <your-image-name> with an image name of your choice.
+3. Build a Docker image for usage in containers. Substitute *your-image-name* with an image name of your choice.
   ``` sh
-  docker build -t <your-image-name>:latest .
+  docker build -t your-image-name:latest .
   ```
 
 4. Run the container with a container name of your choice
   ``` sh
-  docker run -d --name <container-name> -p 3000:3000 <your-image-name>
+  docker run -d --name container-name -p 3000:3000 your-image-name
   ```
 
 5. Edit your Caddyfile

@@ -112,8 +112,6 @@ For this, we use nano which is very easy to understand and use.
     - `Space`: Select a block of text to copy, terminate selection with `Enter`
     - `]`: Paste copied text
 
----
-
 ## Reverse proxy
 
 ### Setting up Caddy
@@ -121,8 +119,6 @@ For this, we use nano which is very easy to understand and use.
 - Caddy is a web server and reverse proxy
 - More modern than NginX and apache and is easier to configure
 - Automatically handles HTTPS redirects and TLS certificates
-
----
 
 ### Installing caddy
 
@@ -137,19 +133,17 @@ $ apt install caddy
 
 - Enable the `systemd` service for automatically starting Caddy on every boot: `sudo systemctl enable caddy`
 
----
-
 ### Initial setup of caddy
 
 - Write a basic configuration at `/etc/caddy/Caddyfile`:
 
 ```
-<hostname> {
+hostname {
 	respond "Hi!"
 }
 ```
 
-This configures Caddy to respond to all requests for <hostname> with a `Hi!` body, try opening the hostname given in the chit with your web browser!
+This configures Caddy to respond to all requests for *hostname* with a `Hi!` body, try opening the hostname given in the chit with your web browser!
 
 # References
 
