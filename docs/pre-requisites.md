@@ -18,6 +18,12 @@ Ensure to follow the [post-installation steps](https://docs.docker.com/engine/in
 
 Ensure to install Docker compose as well.
 
+``` sh
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker # For immediate effect on the current shell, in order for changes to take effect system-wide, logout and login
+```
+
 ## Version Control System
 
 A version control system is highly useful for:

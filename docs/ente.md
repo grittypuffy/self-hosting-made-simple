@@ -183,11 +183,12 @@ Once the cluster has been started and all services have been initiated
 1. Install `ca-certificates` package and update it
     ``` sh  
     docker exec -it my-ente-museum-1 sh -c "apk add ca-certificates"
+    ```
 
 2. Copy the root CA from Caddy container
     
     ``` sh
-    docker cp my-ente-caddy-1:/usr/local/share/ca-certificates/caddy-root.crt ./caddy-root.crt
+    docker cp my-ente-caddy-1:/data/caddy/pki/authorities/local/root.crt ./caddy-root.crt
     ```
 
     This should result in a similar message:
@@ -206,14 +207,14 @@ Once the cluster has been started and all services have been initiated
     Successfully copied 2.56kB to my-ente-museum-1:/usr/local/share/ca-certificates/caddy-root.crt
     ```
 4. Update the certificates
-    ``` sh  
+    ``` sh
     docker exec -it my-ente-museum-1 sh -c "update-ca-certificates"
     ```
 
 ::: tip
 To verify if HTTPS connectivity has been established without unknown certificates error, do a quick ping test.
 ``` sh
-wget https://entestorage.localhost
+docker exec -it my-ente-museum-1 sh -c "wget https://entestorage.localhost"
 ```
 
 The output should be similar to the below one
