@@ -60,7 +60,7 @@ You can use the defaults for almost all questions prompted.
 
 Note: ED25519 is a more modern cryptographic standard and an alternative to the older RSA. It is preferred here due to its smaller key size.
 
-The key will be stored in `USER_DIR/.ssh`, which is `/home/USERNAME/.ssh` on linux, `C:\Users\USERNAME\.ssh` and `/Users/USERNAME/.ssh` on mac. This directory also stores the configurations for the user.
+The key will be stored in `USER_DIR/.ssh`, which is `/home/USERNAME/.ssh` on linux, `C:\Users\USERNAME\.ssh` on windows and `/Users/USERNAME/.ssh` on mac. This directory also stores the configurations for the user.
 
 ---
 
